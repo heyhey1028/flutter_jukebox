@@ -23,7 +23,7 @@ class AudioServiceHandler extends BaseAudioHandler {
   Future<void> initPlayer(MediaItem item) async {
     try {
       _notifyAudioHandlerAboutPlaybackEvents();
-      player.setAudioSource(AudioSource.uri(Uri.parse(item.id)));
+      await player.setAudioSource(AudioSource.uri(Uri.parse(item.id)));
       mediaItem.add(item.copyWith(duration: player.duration));
     } catch (e) {
       debugPrint('ERROR OCCURED:$e');

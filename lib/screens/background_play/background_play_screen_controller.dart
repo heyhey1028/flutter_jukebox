@@ -61,15 +61,12 @@ class BackgroundPlayController extends ChangeNotifier {
     _progressBarSubscription = CombineLatestStream.combine3(
       AudioService.position,
       _handler.playbackState,
-      // _handler.mediaItem
-      // (Duration current, PlaybackState state, MediaItem mediaItem) =>
-      _handler.player.durationStream,
-      (Duration current, PlaybackState state, Duration? total) =>
+      _handler.mediaItem,
+      (Duration current, PlaybackState state, MediaItem? mediaItem) =>
           ProgressBarState(
         current: current,
         buffered: state.bufferedPosition,
-        // total: mediaItem?.duraion ?? Duration.zero
-        total: total ?? Duration.zero,
+        total: mediaItem?.duration ?? Duration.zero,
       ),
     ).listen((ProgressBarState state) => setProgressBarState(state));
   }
