@@ -6,7 +6,7 @@ import 'package:flutter_jukebox/screens/background_audio/audio_handler.dart';
 import 'package:flutter_jukebox/screens/services/service_locator.dart';
 import 'package:rxdart/rxdart.dart';
 
-class BackgroundAudioState extends ChangeNotifier {
+class BackgroundAudioScreenState extends ChangeNotifier {
   ProgressBarState progressBarState = ProgressBarState(
     current: Duration.zero,
     buffered: Duration.zero,
