@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_jukebox/screens/background_play/audio_handler.dart';
+import 'package:flutter_jukebox/screens/background_audio/audio_handler.dart';
 import 'package:flutter_jukebox/screens/services/service_locator.dart';
 import 'package:rxdart/rxdart.dart';
 
-class BackgroundPlayController extends ChangeNotifier {
+class BackgroundAudioState extends ChangeNotifier {
   ProgressBarState progressBarState = ProgressBarState(
     current: Duration.zero,
     buffered: Duration.zero,
@@ -20,12 +20,12 @@ class BackgroundPlayController extends ChangeNotifier {
 
   // for test
   static final _item = MediaItem(
-    id: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-    album: "Science Friday",
-    title: "A Salute To Head-Scratching Science",
-    artist: "Science Friday and WNYC Studios",
+    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fcreative_commons_piano.mp3?alt=media&token=0899ed77-f275-4b0f-a571-e80f25298534',
+    album: "THE CREATIVE COMMONS",
+    title: "Beautiful Piano",
+    artist: "Creative commons of Soundclound",
     artUri: Uri.parse(
-        'https://media.wnyc.org/i/1400/1400/l/80/1/ScienceFriday_WNYCStudios_1400.jpg'),
+        'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fartwork%2Fcreative_commons_piano_artwork.png?alt=media&token=bfe34bf8-4491-4731-af98-1a1e7aa11160'),
   );
 
   /* --- INITIALIZE --- */

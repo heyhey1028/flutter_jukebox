@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_jukebox/main.dart';
-import 'package:flutter_jukebox/screens/background_play/background_play_screen.dart';
+import 'package:flutter_jukebox/screens/background_audio/background_audio_screen.dart';
 import 'package:flutter_jukebox/screens/just_audio/just_audio_screen.dart';
 import 'package:flutter_jukebox/screens/multiple_audio_play/multiple_audio_screen.dart';
 import 'package:flutter_jukebox/screens/volume_control/volume_control_screen.dart';
@@ -45,7 +45,7 @@ class MainDrawer extends StatelessWidget {
               color: Colors.orange[100]!,
               icon: const Icon(Icons.bluetooth_audio_rounded),
               title: 'BACKGROUND PLAY',
-              navigateTo: const BackgroundPlayScreen(),
+              navigateTo: const BackgroundAudioScreen(),
             ),
             DrawerTile(
               color: Colors.green[100]!,

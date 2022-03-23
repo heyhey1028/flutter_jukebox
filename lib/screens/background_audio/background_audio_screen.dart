@@ -1,16 +1,16 @@
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_jukebox/screens/background_play/background_play_screen_controller.dart';
+import 'package:flutter_jukebox/screens/background_audio/background_audio_screen_controller.dart';
 import 'package:flutter_jukebox/widgets/app_scaffold.dart';
 import 'package:provider/provider.dart';
 
-class BackgroundPlayScreen extends StatelessWidget {
-  const BackgroundPlayScreen({Key? key}) : super(key: key);
+class BackgroundAudioScreen extends StatelessWidget {
+  const BackgroundAudioScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => BackgroundPlayController()..init(),
+      create: (_) => BackgroundAudioState()..init(),
       child: const _BackgroundPlayScreen(),
     );
   }
@@ -22,7 +22,7 @@ class _BackgroundPlayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
-      title: const Text('Background Play Sample'),
+      title: const Text('Background Audio Sample'),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -40,22 +40,20 @@ class _BackgroundPlayScreen extends StatelessWidget {
             children: [
               const Spacer(),
               Selector(
-                selector:
-                    (BuildContext ctx, BackgroundPlayController controller) =>
-                        controller.progressBarState,
+                selector: (BuildContext ctx, BackgroundAudioState controller) =>
+                    controller.progressBarState,
                 builder: (BuildContext ctx, ProgressBarState state, _) =>
                     ProgressBar(
                   progress: state.current,
                   buffered: state.buffered,
                   total: state.total,
                   onSeek: (Duration position) =>
-                      context.read<BackgroundPlayController>().seek(position),
+                      context.read<BackgroundAudioState>().seek(position),
                 ),
               ),
               Selector(
-                selector:
-                    (BuildContext ctx, BackgroundPlayController controller) =>
-                        controller.audioState,
+                selector: (BuildContext ctx, BackgroundAudioState controller) =>
+                    controller.audioState,
                 builder: (BuildContext ctx, AudioState state, _) {
                   switch (state) {
                     case AudioState.loading:
@@ -71,14 +69,14 @@ class _BackgroundPlayScreen extends StatelessWidget {
                     case AudioState.paused:
                       return IconButton(
                         onPressed: () =>
-                            context.read<BackgroundPlayController>().play(),
+                            context.read<BackgroundAudioState>().play(),
                         icon: const Icon(Icons.play_arrow),
                         iconSize: 32.0,
                       );
                     case AudioState.playing:
                       return IconButton(
                         onPressed: () =>
-                            context.read<BackgroundPlayController>().pause(),
+                            context.read<BackgroundAudioState>().pause(),
                         icon: const Icon(Icons.pause),
                         iconSize: 32.0,
                       );
