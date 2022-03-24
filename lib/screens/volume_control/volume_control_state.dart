@@ -21,13 +21,12 @@ class VolumeControlState extends ChangeNotifier {
 
   // for test
   static final _item = MediaItem(
-    id: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-    album: "Science Friday",
-    title: "A Salute To Head-Scratching Science",
-    artist: "Science Friday and WNYC Studios",
-    duration: const Duration(milliseconds: 5739820),
+    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fcreative_commons_piano.mp3?alt=media',
+    album: "THE CREATIVE COMMONS",
+    title: "Beautiful Piano",
+    artist: "Creative commons of Soundclound",
     artUri: Uri.parse(
-        'https://media.wnyc.org/i/1400/1400/l/80/1/ScienceFriday_WNYCStudios_1400.jpg'),
+        'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fartwork%2Fcreative_commons_piano_artwork.png?alt=media'),
   );
 
   /* --- INITIALIZE --- */

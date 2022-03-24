@@ -20,12 +20,12 @@ class BackgroundAudioScreenState extends ChangeNotifier {
 
   // for test
   static final _item = MediaItem(
-    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fcreative_commons_piano.mp3?alt=media&token=0899ed77-f275-4b0f-a571-e80f25298534',
+    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fcreative_commons_piano.mp3?alt=media',
     album: "THE CREATIVE COMMONS",
     title: "Beautiful Piano",
     artist: "Creative commons of Soundclound",
     artUri: Uri.parse(
-        'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fartwork%2Fcreative_commons_piano_artwork.png?alt=media&token=bfe34bf8-4491-4731-af98-1a1e7aa11160'),
+        'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fartwork%2Fcreative_commons_piano_artwork.png?alt=media'),
   );
 
   /* --- INITIALIZE --- */

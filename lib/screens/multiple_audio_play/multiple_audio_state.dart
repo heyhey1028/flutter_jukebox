@@ -23,33 +23,26 @@ class MultipleAudioState extends ChangeNotifier {
 
   // for test
   static final _item = MediaItem(
-    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fmusic_box.mp3?alt=media&token=cf88a17e-bbe9-46de-95a8-e855a23fbb3b',
-    album: "Science Friday",
-    title: "A Salute To Head-Scratching Science",
-    artist: "Science Friday and WNYC Studios",
-    duration: const Duration(milliseconds: 5739820),
+    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fcreative_commons_piano.mp3?alt=media',
+    album: "THE CREATIVE COMMONS",
+    title: "Beautiful Piano",
+    artist: "Creative commons of Soundclound",
     artUri: Uri.parse(
-        'https://media.wnyc.org/i/1400/1400/l/80/1/ScienceFriday_WNYCStudios_1400.jpg'),
+        'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fartwork%2Fcreative_commons_piano_artwork.png?alt=media'),
   );
 
-  static final _item1 = MediaItem(
-    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fsuzu_mushi.mp3?alt=media&token=8222b9e0-8b4d-4e0f-ae2c-6e602606dfcd',
+  static const _item1 = MediaItem(
+    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fsuzu_mushi.mp3?alt=media',
     album: "Science Friday",
     title: "A Salute To Head-Scratching Science",
     artist: "Science Friday and WNYC Studios",
-    duration: const Duration(milliseconds: 5739820),
-    artUri: Uri.parse(
-        'https://media.wnyc.org/i/1400/1400/l/80/1/ScienceFriday_WNYCStudios_1400.jpg'),
   );
 
-  static final _item2 = MediaItem(
-    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fwave.mp3?alt=media&token=40388f98-210c-4f4d-8c72-ac0b21232dd5',
+  static const _item2 = MediaItem(
+    id: 'https://firebasestorage.googleapis.com/v0/b/flutter-toybox.appspot.com/o/audios%2Fwave.mp3?alt=media',
     album: "Science Friday",
     title: "A Salute To Head-Scratching Science",
     artist: "Science Friday and WNYC Studios",
-    duration: const Duration(milliseconds: 5739820),
-    artUri: Uri.parse(
-        'https://media.wnyc.org/i/1400/1400/l/80/1/ScienceFriday_WNYCStudios_1400.jpg'),
   );
 
   /* --- INITIALIZE --- */
