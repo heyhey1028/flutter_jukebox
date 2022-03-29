@@ -3,6 +3,7 @@ import 'package:flutter_jukebox/main.dart';
 import 'package:flutter_jukebox/screens/background_audio/background_audio_screen.dart';
 import 'package:flutter_jukebox/screens/just_audio/just_audio_screen.dart';
 import 'package:flutter_jukebox/screens/multiple_audio_play/multiple_audio_screen.dart';
+import 'package:flutter_jukebox/screens/river_audio/river_audio_screen.dart';
 import 'package:flutter_jukebox/screens/volume_control/volume_control_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -58,6 +59,12 @@ class MainDrawer extends StatelessWidget {
               icon: const Icon(Icons.queue_music),
               title: 'MULTIPLE AUDIO',
               navigateTo: const MultipleAudioScreen(),
+            ),
+            DrawerTile(
+              color: Colors.indigo[100]!,
+              icon: const Icon(Icons.water),
+              title: 'RIVER AUDIO',
+              navigateTo: const RiverAudioScreen(),
             ),
           ],
         ),
