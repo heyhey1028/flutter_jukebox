@@ -1,0 +1,32 @@
+name: Dependabot auto-assign
+on: pull_request_target
+
+permissions:
+  pull-requests: write
+  contents: write
+  
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    timeout-minutes: 5
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const names = [
+                'heyhey1028',
+                'WakabayashiDaigo'
+            ]
+            const index = Math.floor(Math.random() * names.length)
+            const assignee = names[index]
+            console.log(`${assignee}`)
+            github.rest.issues.addAssignees({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              assignees: [assignee]
+            })
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ toJSON(github.event.pull_request.assignees) == '[]' }}
