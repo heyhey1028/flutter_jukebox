@@ -1,7 +1,0 @@
-version: 2
-enable-beta-ecosystems: true
-updates:
-  - package-ecosystem: "pub" # change to package ecosystem you are using.(ex. npm)
-    directory: "/"
-    schedule:
-      interval: daily
